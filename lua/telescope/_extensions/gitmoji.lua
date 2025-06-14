@@ -19,7 +19,7 @@ local search_and_amend = function(opts)
     opts = opts or {}
 
     local defaults = {
-        action = gm_actions.commit_ammend,
+        action = gm_actions.commit_amend,
     }
 
     gm_picker(vim.tbl_extend("force", defaults, opts))
@@ -31,6 +31,6 @@ return telescope.register_extension({
     end,
     exports = {
         gitmoji = search_and_commit,
-        gitmoji_ammend = search_and_amend,
+        gitmoji_amend = search_and_amend,
     },
 })
